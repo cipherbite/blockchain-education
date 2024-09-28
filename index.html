@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="description" content="Next-generation blockchain security and audit platform">
+    <meta name="theme-color" content="#0c1821">
+    <meta name="color-scheme" content="dark light">
+    
+    <title>BlockShield - Blockchain Security</title>
+    
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <script async defer src="/analytics.js"></script>
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/manifest.json">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+   
+    
+    <style>
+        @layer critical {
+            body {
+                background-color: #0c1821;
+                color: #ecf0f1;
+                font-family: 'Rajdhani', sans-serif;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="root"></div>
+    
+    <noscript>
+        <p>JavaScript is required to run this application. Please enable JavaScript in your browser settings.</p>
+    </noscript>
+    
+    <!-- Preload key assets -->
+    <link rel="preload" href="/assets/logo.svg" as="image" type="image/svg+xml">
+    
+    <!-- Web Components -->
+    
+    
+    <!-- Example usage of blockchain-card Web Component -->
+    <blockchain-card 
+        title="Smart Contract Audit" 
+        description="Advanced security analysis for your smart contracts">
+    </blockchain-card>
+    
+    <!-- Plausible Analytics (Replace YOUR_DOMAIN with your actual domain) -->
+    <script defer data-domain="YOUR_DOMAIN" src="https://plausible.io/js/plausible.js"></script>
+    
+    <!-- Optional: Plausible Analytics custom event tracking -->
+    <script>
+        window.plausible = window.plausible || function() { (window.plausible.q = window.plausible.q || []).push(arguments) }
+    </script>
+     <script type="module" src="/src/main.jsx"></script>
+</body>
+</html>

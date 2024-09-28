@@ -1,0 +1,23 @@
+User-agent: *
+Allow: /
+
+# Disallow access to any potential admin or private areas
+Disallow: /admin/
+Disallow: /private/
+Disallow: /assets/private/
+
+# Allow access to key public assets
+Allow: /assets/logo.svg
+Allow: /favicon.svg
+Allow: /apple-touch-icon.png
+Allow: /manifest.json
+
+# Prevent indexing of potential search or filter results pages
+Disallow: /search
+Disallow: /*?*query=
+
+# Add your sitemap here when it's available
+# Sitemap: https://your-domain.com/sitemap.xml
+
+# Crawl-delay directive (optional, adjust as needed)
+# Crawl-delay: 10

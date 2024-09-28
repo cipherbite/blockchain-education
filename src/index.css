@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --blockchain-green: #00b894;
+  --blockchain-black: #1e272e;
+  --blockchain-light: #ecf0f1;
+  --blockchain-accent: #0984e3;
+  --blockchain-secondary: #2d3436;
+  --blockchain-bg-dark: #0c1821;
+  --blockchain-bg-accent: #1b3a4b;
+}
+
+@layer base {
+  body {
+    @apply bg-blockchain-bg-dark text-blockchain-light font-sans;
+    font-family: 'Rajdhani', sans-serif;
+  }
+}
+
+@layer components {
+  .nav-link {
+    @apply text-blockchain-light opacity-80 hover:opacity-100 transition-opacity duration-200;
+  }
+
+  .nav-link.active {
+    @apply text-blockchain-accent opacity-100 font-semibold;
+  }
+
+  .content-section {
+    @apply bg-blockchain-secondary p-6 rounded-lg shadow-md text-blockchain-light bg-opacity-95;
+  }
+
+  .btn-primary {
+    @apply bg-gradient-to-r from-blockchain-green to-blockchain-accent text-blockchain-light py-2 px-4 rounded-full font-semibold shadow-sm hover:shadow-md transition-all duration-200;
+  }
+
+  .card-blockchain {
+    @apply bg-blockchain-black text-blockchain-light p-4 rounded-lg shadow-sm border border-blockchain-accent border-opacity-20 transition-all duration-200;
+  }
+
+  .card-blockchain:hover {
+    @apply bg-blockchain-bg-accent text-blockchain-accent shadow-md;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-blockchain-green to-blockchain-accent;
+  }
+
+  .bg-glass {
+    @apply backdrop-blur-md bg-opacity-30;
+  }
+}
+
+@media screen and (min-width: 640px) {
+  html { font-size: 16px; }
+}
+
+@media screen and (min-width: 1024px) {
+  html { font-size: 18px; }
+}
+
+@media print {
+  body { @apply text-black bg-white; }
+  .no-print { display: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
